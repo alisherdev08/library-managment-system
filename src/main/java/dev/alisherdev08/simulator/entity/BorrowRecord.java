@@ -1,27 +1,28 @@
 package dev.alisherdev08.simulator.entity;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public class BorrowRecord {
-    private Student student;
-    private Book book;
+    private UUID studentId;
+    private UUID bookId;
     private LocalDate borrowDate;
     private LocalDate returnDate;
     private boolean returned;
 
-    public BorrowRecord(Student student, Book book, LocalDate borrowDate, LocalDate returnDate, boolean returned){
-        this.student = student;
-        this.book = book;
+    public BorrowRecord(UUID studentID, UUID bookId, LocalDate borrowDate, LocalDate returnDate, boolean returned){
+        this.studentId = studentID;
+        this.bookId = bookId;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
         this.returned = returned;
     }
 
-    public Student getStudent() {
-        return student;
+    public UUID getStudentID() {
+        return studentId;
     }
-    public Book getBook() {
-        return book;
+    public UUID getBook() {
+        return bookId;
     }
     public LocalDate getBorrowDate() {
         return borrowDate;
@@ -43,8 +44,8 @@ public class BorrowRecord {
     @Override
     public String toString() {
         return "BorrowRecord{" +
-                ", student=" + student +
-                ", book=" + book +
+                ", studentID=" + studentId +
+                ", book=" + bookId +
                 ", borrowDate=" + borrowDate +
                 ", returnDate=" + returnDate +
                 ", returned=" + returned +
