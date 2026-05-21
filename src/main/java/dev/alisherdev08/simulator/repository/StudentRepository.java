@@ -9,20 +9,21 @@ import java.util.UUID;
 public class StudentRepository {
     private List<Student> students = new ArrayList<>();
 
-    public void add(Student student){
+    public void save(Student student){
         students.add(student);
     }
     public List<Student> findAll(){
          return students;
     }
-    public Student findByID(UUID id){
+    public Student findById(UUID id){
         return students.stream().filter(student -> student.getId().equals(id)).findFirst().orElse(null);
     }
-    public void deleteByID(UUID id){
+    public void deleteById(UUID id){
         students.removeIf(student -> student.getId().equals(id));
     }
-
-
+    public List<Student> searchByName(String studentName){
+        return students.stream().filter(student -> student.getFullName().equals(studentName)).toList();
+    }
 
 
 
