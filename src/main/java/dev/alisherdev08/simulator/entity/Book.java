@@ -9,12 +9,11 @@ public class Book {
     private int quantity;
     private boolean isAvailable;
 
-    public Book(UUID id, String title, String author, int quantity, boolean isAvailable){
+    public Book(UUID id, String title, String author, int quantity){
         this.id = id;
         this.title = title;
         this.author = author;
         this.quantity = quantity;
-        this.isAvailable = isAvailable;
     }
 
     public UUID getId() {
