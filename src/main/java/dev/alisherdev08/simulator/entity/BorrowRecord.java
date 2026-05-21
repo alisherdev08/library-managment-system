@@ -21,14 +21,8 @@ public class BorrowRecord {
     public UUID getStudentID() {
         return studentId;
     }
-    public UUID getBook() {
+    public UUID getBookId() {
         return bookId;
-    }
-    public LocalDate getBorrowDate() {
-        return borrowDate;
-    }
-    public LocalDate getReturnDate() {
-        return returnDate;
     }
     public boolean isReturned() {
         return returned;
@@ -51,6 +45,5 @@ public class BorrowRecord {
                 ", returned=" + returned +
                 '}';
     }
-
 
 }
