@@ -18,8 +18,6 @@ A simple console-based Library System built with Java to practice core **Object-
 
 - **Encapsulation**
 - **Abstraction**
-- **Inheritance**
-- **Polymorphism**
 - **Object Composition**
 
 ---
@@ -32,12 +30,17 @@ src/
  ┃ ┗ Main.java
  ┣ entity/
  ┃ ┣ Book.java
- ┃ ┣ User.java
- ┃ ┗ BorrowRecord.java
- ┣ service/
- ┃ ┗ LibraryService.java
- ┗ repository/
-   ┗ LibraryRepository.java
+ ┃ ┣ BorrowRecord.java
+ ┃ ┗ Student.java
+ ┣ repository/
+ ┃ ┣ BookRepository.java
+ ┃ ┣ BorrowRecordRepository.java
+ ┃ ┗ StudentRepository.java
+ ┗ service/
+   ┣ BookService.java
+   ┣ BorrowRecordService.java
+   ┗ StudentService.java
+  
 ```
 
 ---
@@ -58,6 +61,9 @@ This project was created to strengthen understanding of:
 - OOP design
 - Code organization
 - Basic application architecture
+
+
+  This project demonstrates encapsulation through private fields and abstraction through service-repository separation. Other OOP principles were not forced because the domain did not require inheritance or polymorphism.
 
 ---
 
