@@ -49,7 +49,7 @@ public class BorrowRecordService {
         }
         System.out.println("Book returned successfully");
     }
-    public List<BorrowRecord> findActiveBorrows(){
+    public List<BorrowRecord> getActiveBorrows(){
        return  borrowRecordRepository.findActiveBorrows();
     }
      public List<BorrowRecord> findByStudentId(UUID studentId){

@@ -13,9 +13,11 @@ public class BookService {
         this.bookRepository = bookRepository;
     }
 
-    public void addBook(String title, String author, int quantity, boolean isAvailable) {
-        Book book = new Book(UUID.randomUUID(), title, author, quantity, isAvailable);
+    public void addBook(String title, String author, int quantity) {
+        Book book = new Book(UUID.randomUUID(), title, author, quantity);
+        book.setAvailable(quantity > 0);
         bookRepository.save(book);
+        System.out.println("Book added successfully: " + book.getId());
     }
     public void removeBook(UUID bookId){
         Book book = bookRepository.findByID(bookId);
@@ -35,6 +37,8 @@ public class BookService {
     public List<Book> searchBookByTitle(String title){
         return bookRepository.findByTitle(title);
     }
-
+    public List<Book> findAllBooks() {
+        return bookRepository.findAll();
+    }
 
 }
